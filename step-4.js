@@ -15,7 +15,7 @@ function getHTML (options, callback) {
      // the callback is invoked when all of the data has been received
     // (the `end` of the stream)
     response.on('end', function() {
-      printHTML(dataReceived);
+      callback(dataReceived);
     });
   });
 
